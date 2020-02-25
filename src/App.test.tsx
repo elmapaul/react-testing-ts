@@ -10,6 +10,7 @@ import App from './App';
  * @param {object} state - Initial state for setup
  * @returns {ShallowWrapper}
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const setup = (props={}, state=null) => {
   const wrapper = shallow(<App {...props} />);
   if (state) wrapper.setState(state);
