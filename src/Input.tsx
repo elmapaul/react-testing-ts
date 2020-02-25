@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Input extends Component {
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
+    constructor(props) {
+        super(props);
+
+    }
+
     render() {
+        // @ts-ignore
         const contents = this.props.success
         ? null
         : ( <form className="form-inline">
