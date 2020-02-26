@@ -7,10 +7,6 @@ export const actionTypes = {
     SET_SECRET_WORD: 'SET_SECRET_WORD'
 };
 
-// export function correctGuess() {
-//     return { type: actionTypes.CORRECT_GUESS }
-// }
-
 export const guessWord = (guessedWord) => {
     return function(dispatch, getState){
         const secretWord = getState().secretWord;

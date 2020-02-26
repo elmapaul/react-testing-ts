@@ -8,8 +8,15 @@ import Congrats from './Congrats';
 import './App.css';
 import Input from './Input';
 
-class App extends Component {
+export class UnconnectedApp extends Component {
+    componentDidMount(): void {
+        // get the secret word
+        // @ts-ignore
+        this.props.getSecretWord();
+    }
+
     render() {
+        // @ts-ignore
         return (
             <div className="container">
                 <h1>Jotto</h1>
@@ -30,4 +37,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, { getSecretWord })(App);
+export default connect(mapStateToProps, { getSecretWord })(UnconnectedApp);
