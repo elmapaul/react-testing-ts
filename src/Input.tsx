@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { guessWord} from './actions';
+
 class Input extends Component {
     // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(props) {
@@ -40,4 +42,4 @@ const mapStateToProps = ({ success }) => {
     return { success }
 }
 
-export default connect(mapStateToProps)(Input);
+export default connect(mapStateToProps, { guessWord })(Input);

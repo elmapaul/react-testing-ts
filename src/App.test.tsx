@@ -12,7 +12,7 @@ import App from './App';
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const setup = (props={}, state=null) => {
-  const wrapper = shallow(<App {...props} />);
+  const wrapper = shallow(<App {...propss} />);
   if (state) wrapper.setState(state);
   return wrapper;
 };
