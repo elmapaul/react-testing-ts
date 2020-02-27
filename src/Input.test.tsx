@@ -90,9 +90,6 @@ describe('`guessWord` action creator call', ()=>{
     beforeEach(()=>{
         // set up mock for guessWord
         guessWordMock = jest.fn();
-        // const props = {
-        //     guessWord: guessWordMock
-        // };
 
         // set up app component with guessWordMock as the guessWord prop
         // @ts-ignore
@@ -110,9 +107,13 @@ describe('`guessWord` action creator call', ()=>{
         const guessWordCallCount = guessWordMock.mock.calls.length;
         expect(guessWordCallCount).toBe(1);
     });
+    // TODO: Fix
     test('calls `guessWord` with input value as argument', ()=>{
         const guessWordArg = guessWordMock.mock.calls[0][0];
-        // console.log('guessWordMock', guessWordMock.mock.calls);
         expect(guessWordArg).toBe(guessedWord);
     });
+    // TODO: Fix
+    // test('input box clears on submit', ()=>{
+    //     expect(wrapper.state('currentGuess')).toBe('');
+    // });
 });

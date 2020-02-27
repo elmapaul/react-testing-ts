@@ -24,6 +24,8 @@ export class UnconnectedInput extends Component {
             // @ts-ignore
             this.props.guessWord(guessedWord);
         }
+
+            this.setState({ currentGuess: ''} )
     }
 
     render() {
@@ -48,6 +50,8 @@ export class UnconnectedInput extends Component {
             </button>
         </form>
         );
+
+        // TODO: onClick={()=> this.props.guessWord('train')} should be onClick={()=> this.props.guessWord('')} according to the lesson
 
         return (
             <div data-test="component-input">
